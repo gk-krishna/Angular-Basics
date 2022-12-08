@@ -1,0 +1,55 @@
+<div style="text-align:center">
+  <h1>Welcome to {{ title }}!</h1>
+  <img
+    width="300"
+    alt="Angular Logo"
+    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+  />
+</div>
+
+<span class="setup">Given Number</span>
+<h1 class="punchline">{{ data }}</h1>
+
+<!-- 
+  Day 3  Data Bindings Four Types
+https://www.c-sharpcorner.com/article/learn-angular-8-step-by-step-in-10-days-data-binding-day-3/
+ -->
+
+<!-- Type 1 Expression or Interpolation usually represented by {{}} -->
+
+<div>
+  <span> Current Number is {{ value1 }}</span> <br /><br />
+  <!-- Example for Property binding using input -->
+  Display Value in Input Controls : <input [value]="value1" /> <br /><br />
+
+  <span> Current Number is {{ value1 | currency }}</span
+  ><br /><br />
+  <span> Current Date & Time is {{ dt }}</span
+  ><br /><br />
+  <span> Current Date is {{ dt | date }}</span
+  ><br /><br />
+  <span> Current Status is {{ status }}</span
+  ><br /><br />
+  <span>
+    {{
+      status ? 'This is Correct Status' : 'This is wrong(false) Status'
+    }}</span
+  ><br /><br />
+  <span> {{ returnString() }}</span
+  ><br /><br />
+</div>
+
+<!-- Event binding example -->
+<div>
+  <h2>Demo of Event Binding in Angular 8</h2>
+  <input type="button" value="Click" class="btn-block" (click)="showAlert()" />
+  <br /><br />
+  <input
+    type="button"
+    value="Mouse Enter"
+    class="btn-block"
+    (mouseenter)="showAlert()"
+  />
+  <br /><br />
+  <input type="button" value="Click" class="btn-block" (click)="showAlert()" />
+</div>
